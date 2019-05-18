@@ -50,9 +50,9 @@ while (True):
     #Display Voltage in mV:
     values[0] = ((adc.read_adc(0, gain=GAIN))*4096/32767)
     #Display Resistance:
-    values[1] = values[0] / current
+    values[1] = values[0]/current
     #Display Temperature:
-    values[2] = find_nearest(conv_list,values[1])
+    values[2] = find_nearest(conv_list, values[1])
         
     # Print the ADC values.
     print('| {0:>6} | {1:>6} | {2:>6} |'.format(*values))
